@@ -40,6 +40,7 @@
       "matchUpdateTypes": ["major", "minor"],
       "groupName": "MicroK8s"
     }
+
   ],
   "regexManagers": [
     {
@@ -79,7 +80,7 @@
     },
     // Update microk8s to latest release
     {
-      "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       "matchStrings": [
         "(?<currentValue>[0-9.]+)-strict/stable +# renovate: latest strict microk8s"
       ],

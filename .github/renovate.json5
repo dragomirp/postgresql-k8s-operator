@@ -33,7 +33,15 @@
       "versioning": "loose",
       "allowedVersions": "<3",
       "groupName": "Juju 2"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchDepNames": ["Microk8s"],
+      "matchPackageNames": ["canonical/microk8s"],
+      "matchUpdateTypes": ["major", "minor"],
+      "groupName": "MicroK8s"
     }
+
   ],
   "regexManagers": [
     {
@@ -70,6 +78,18 @@
       "packageNameTemplate": "juju",
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose"
+    },
+    // Update microk8s to latest release
+    {
+      "customType": "regex",
+      "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      "matchStrings": [
+        "microk8s-snap-channel: (?<currentValue>.*?)-strict/stable +# renovate: latest strict microk8s"
+      ],
+      "depNameTemplate": "Microk8s",
+      "packageNameTemplate": "canonical/microk8s",
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver"
     }
   ]
 }

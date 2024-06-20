@@ -37,7 +37,6 @@
     {
       "matchManagers": ["regex"],
       "matchPackageNames": ["canonical/microk8s"],
-      "matchUpdateTypes": ["major", "minor"],
       "groupName": "MicroK8s"
     }
 

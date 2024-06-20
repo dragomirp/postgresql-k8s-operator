@@ -82,7 +82,7 @@
     {
       "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       "matchStrings": [
-        "(?<currentValue>[0-9.]+)-strict/stable +# renovate: latest strict microk8s"
+        "(?<currentValue>[0-9.]+)[a-z-]*/[a-z]+ +# renovate: latest strict microk8s"
       ],
       "depNameTemplate": "canonical/microk8s",
       "extractVersionTemplate": "^v(?<version>.*)$",

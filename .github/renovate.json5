@@ -37,6 +37,7 @@
     {
       "matchManagers": ["regex"],
       "matchPackageNames": ["canonical/microk8s"],
+      "matchUpdateTypes": ["major", "minor"],
       "groupName": "MicroK8s"
     }
 
@@ -86,7 +87,8 @@
       "depNameTemplate": "canonical/microk8s",
       "extractVersionTemplate": "^v(?<version>.*)$",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "loose"
     }
+
   ]
 }

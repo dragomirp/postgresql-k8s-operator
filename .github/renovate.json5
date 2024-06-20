@@ -36,12 +36,10 @@
     },
     {
       "matchManagers": ["regex"],
-      "matchDepNames": ["Microk8s"],
       "matchPackageNames": ["canonical/microk8s"],
       "matchUpdateTypes": ["major", "minor"],
       "groupName": "MicroK8s"
     }
-
   ],
   "regexManagers": [
     {
@@ -81,13 +79,12 @@
     },
     // Update microk8s to latest release
     {
-      "customType": "regex",
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": [
-        "(?<currentValue>.*?)-strict/stable +# renovate: latest strict microk8s"
+        "(?<currentValue>[0-9.]+)-strict/stable +# renovate: latest strict microk8s"
       ],
-      "depNameTemplate": "Microk8s",
-      "packageNameTemplate": "canonical/microk8s",
+      "depNameTemplate": "canonical/microk8s",
+      "extractVersionTemplate": "^v(?<version>.*)$",,
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
     }

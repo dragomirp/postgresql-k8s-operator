@@ -84,7 +84,7 @@
         "(?<currentValue>[0-9.]+)-strict/stable +# renovate: latest strict microk8s"
       ],
       "depNameTemplate": "canonical/microk8s",
-      "extractVersionTemplate": "^v(?<version>.*)$",,
+      "extractVersionTemplate": "^v(?<version>.*)$",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver"
     }

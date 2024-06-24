@@ -87,7 +87,7 @@
       "depNameTemplate": "canonical/microk8s",
       "extractVersionTemplate": "^v(?<version>.*)$",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "loose"
+      "versioningTemplate": "semver"
     }
 
   ]

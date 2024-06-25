@@ -26,13 +26,11 @@
       "groupName": "Juju 3"
     },
     {
-      "matchDepNames": ["libjuju 2"],
-      "matchPackageNames": ["juju"],
       "matchManagers": ["regex"],
+      "matchDepNames": ["juju"],
       "matchDatasources": ["pypi"],
-      "versioning": "loose",
       "allowedVersions": "<3",
-      "groupName": "Juju 2"
+      "groupName": "Juju agents"
     },
     {
       "matchManagers": ["regex"],
@@ -68,13 +66,11 @@
       "extractVersionTemplate": "Juju release"
     },
     {
-      "customType": "regex",
-      "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       "matchStrings": [
         "(libjuju: )==(?<currentValue>.*?) +# renovate: latest libjuju 2"
       ],
-      "depNameTemplate": "libjuju 2",
-      "packageNameTemplate": "juju",
+      "depNameTemplate": "juju",
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose"
     },
